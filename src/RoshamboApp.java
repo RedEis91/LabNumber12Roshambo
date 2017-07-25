@@ -9,9 +9,7 @@ public class RoshamboApp {
         int wins = 0;
         String play;
         You you = new You(name, wins);
-        System.out.println("You wanna play?");
         do {
-            play = scan.next();
             RegularSizedRudy rudy = new RegularSizedRudy("Rudy", 0);
             System.out.println("Rock, paper or scissors?: ");
             String s = scan.next();
@@ -22,15 +20,17 @@ public class RoshamboApp {
             System.out.println("your selection was " + rosh1);
             System.out.println("Rudys selection was " + rosh2);
 
-            if (rosh1.equals("ROCK") && rosh2.equals("SCISSORS") || rosh1.equals("SCISSORS") && rosh2.equals("PAPER") || rosh1.equals("PAPER") && rosh2.equals("ROCK")) {
+            if (rosh1.equals(Roshambo.ROCK) && rosh2.equals(Roshambo.SCISSORS) || rosh1.equals(Roshambo.SCISSORS) && rosh2.equals(Roshambo.PAPER) || rosh1.equals(Roshambo.PAPER) && rosh2.equals(Roshambo.ROCK)) {
                 System.out.println("You win!");
-                you.setWins(wins + 1);
+                you.setWins();
             } else if (rosh1.equals(rosh2)) {
                 System.out.println("You tied! Everyone loses");
             } else {
                 System.out.println("You lost!");
+                System.out.println(rosh1);
+                System.out.println(rosh2);
             }
-            scan.nextLine();
+            System.out.println("You've won " + you.getWins() + " times.");
             System.out.println("Wanna play again?");
             play = scan.next();
 

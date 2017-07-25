@@ -21,8 +21,8 @@ public class Player {
         return wins;
     }
 
-    public void setWins(int wins) {
-        this.wins = wins;
+    public void setWins() {
+        this.wins++;
     }
 
 
