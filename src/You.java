@@ -1,7 +1,7 @@
 //human input
 public class You extends Player{
-    public You(String name, int wins) {
-        super(name, wins);
+    public You(String name, int wins, int losses) {
+        super(name, wins, losses);
     }
 
     Roshambo r1;
