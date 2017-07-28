@@ -1,5 +1,5 @@
 //abstract master human class
-public class Player {
+public abstract class Player {
     //needs abstract generate rochambo method
     private String name;
     private int wins;
@@ -39,21 +39,7 @@ public class Player {
         this.wins = wins;
         this.losses = losses;
     }
-    public Roshambo generateRoshambo() {
-        Roshambo r1 = Roshambo.ROCK;
-        double i =  Math.floor(Math.random() * (3 - 1)) + 1; //The maximum is exclusive and the minimum is inclusive
-        if (i == 1.00) {
-            r1 = Roshambo.ROCK;
-        }
-        if (i == 2.00) {
-            r1 = Roshambo.PAPER;
-        }
-        if (i == 2.00) {
-            r1 = Roshambo.SCISSORS;
-        }
-        return r1;
-    }
-
+    abstract Roshambo generateRoshambo();
 
 
 }
